@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Covid-19 India Tracker</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+        <style>
+            body {
+              padding: 25px;
+              background-color: white;
+              color: black;
+              font-size: 25px;
+            }
+            
+            .dark-mode {
+              background-color: black;
+              color: white;
+            }
+            </style>
+    <body>
+        <div class="container-fluid p-5 text-center my-3">
+            <h1>Covid-19 India Tracker</h1>
+            <h5 class="text-muted">
+                Open Source Project for Tracking Covid-19 cases in India.    
+                <button onclick="myFunction()">Toggle dark mode</button>
+            </h5>
+        </div>
+
+        <div class="container my-5">
+            <div class="row text-center">
+                <div class="col-3 text-warning">
+                    <h5>Confirmed</h5>
+                    <p id="confirmed"></p>
+                </div>
+                <div class="col-3 text-info">
+                    <h5>Active</h5>
+                    <p id="active"></p>
+                </div>
+                <div class="col-3 text-success">
+                    <h5>Recovered</h5>
+                    <p id="recovered"></p>
+                </div>
+                <div class="col-3 text-danger">
+                    <h5>Deceased</h5>
+                    <p id="deaths"></p>
+                </div>
+            </div>
+
+            <canvas id = "myChart"></canvas>
+        </div>
+
+
+        <script>
+            function myFunction() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+            </script>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="scripts.js"></script>
+</html>
